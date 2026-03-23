@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The-Arc | Skuteczny Marketing Online & Performance B2B</title>
+    <meta name="description" content="Przestań przepalać budżet. Zostań rynkowym liderem z The-Arc. Generujemy wartościowe leady i maksymalizujemy ROI każdej wydanej złotówki dzięki zaawansowanej analityce i AI.">
+    <meta name="keywords" content="marketing online, kampanie ads, generowanie leadów, B2B marketing, optymalizacja konwersji, performance marketing, wzrost sprzedaży">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#F8FAFC',
+                        surface: '#FFFFFF',
+                        accent: '#7C3AED', /* Digital Violet */
+                        ksef: '#3B82F6', /* Wibrujący błękit dla KSeF */
+                        textDark: '#0F172A',
+                        textMuted: '#475569',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F8FAFC;
+            /* Surowy, luksusowy beton architektoniczny */
+            background-image: linear-gradient(rgba(248, 250, 252, 0.93), rgba(248, 250, 252, 0.93)), url('https://images.unsplash.com/photo-1598588556756-c0c5aa857849?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #0F172A;
+        }
+
+        /* Dyskretny, techniczny szum */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            pointer-events: none; z-index: 50; opacity: 0.04;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        /* Glassmorphism Classes */
+        .glass-milky {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 20px 40px -10px rgba(124, 58, 237, 0.05);
+            border-radius: 1.5rem;
+        }
+
+        /* Perfekcyjnie gładki blask fioletowy */
+        .violet-glow {
+            box-shadow: 0 10px 30px -5px rgba(124, 58, 237, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .violet-glow:hover {
+            box-shadow: 0 15px 40px -5px rgba(124, 58, 237, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Blask przycisku KSeF */
+        .ksef-glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+            animation: pulse-blue 2s infinite;
+        }
+        
+        @keyframes pulse-blue {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #7C3AED 0%, #0F172A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- NAWIGACJA -->
+    <nav class="fixed top-0 left-0 w-full px-6 py-5 md:px-12 flex justify-between items-center z-40 bg-white/70 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <!-- Lewa: Logo -->
+        <div class="font-display font-bold text-2xl tracking-tighter text-textDark z-50 relative">
+            The<span class="text-accent">-</span>Arc
+        </div>
+
+        <!-- Środek: Centrowane Menu Desktop -->
+        <div class="hidden lg:flex absolute left-1/2 transform -translate-x-1/2 items-center gap-2 p-1.5 bg-white/80 backdrop-blur-md border border-gray-200 rounded-full shadow-sm">
+            <a href="index.html" class="px-5 py-2 rounded-full text-sm font-bold transition-colors bg-accent/10 text-accent shadow-inner">Marketing B2B</a>
+            <a href="landing-ksef.html" class="px-5 py-2 rounded-full text-sm font-bold transition-colors text-accent hover:bg-accent/5">KSeF (e-Faktury)</a>
+            <a href="ai.html" class="px-5 py-2 rounded-full text-sm font-bold transition-colors text-accent hover:bg-accent/5">Wdrożenia AI</a>
+        </div>
+        
+        <!-- Prawa: Przycisk CTA -->
+        <div class="hidden lg:flex items-center z-50 relative">
+            <a href="#kontakt" class="px-6 py-2.5 bg-accent text-white rounded-full transition-all tracking-wide violet-glow font-bold border border-transparent hover:bg-[#6D28D9] text-sm">
+                Umów Konsultację AI
+            </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger -->
+        <label for="mobile-menu" class="lg:hidden cursor-pointer text-textDark z-50 relative">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </label>
+        <input type="checkbox" id="mobile-menu" class="peer hidden">
+        
+        <!-- Mobile Dropdown -->
+        <div class="peer-checked:flex hidden absolute top-0 left-0 w-full h-screen bg-white/95 backdrop-blur-2xl flex-col items-center justify-center gap-8 z-40">
+            <a href="index.html" class="text-2xl font-display font-bold text-accent px-6 py-2 bg-accent/10 rounded-full">Marketing B2B</a>
+            <a href="landing-ksef.html" class="text-2xl font-display font-bold text-accent">KSeF (e-Faktury)</a>
+            <a href="ai.html" class="text-2xl font-display font-bold text-accent">Wdrożenia AI</a>
+            <a href="#kontakt" class="mt-4 px-8 py-4 bg-accent text-white rounded-full font-bold shadow-lg shadow-accent/40 text-lg tracking-wide">
+                Umów Konsultację AI
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Agresywne uderzenie) -->
+    <section class="relative min-h-screen flex flex-col justify-center px-6 md:px-12 pt-32 pb-20 overflow-hidden text-center">
+        <!-- Cyfrowa aura w tle -->
+        <div class="absolute top-[10%] right-[5%] w-[700px] h-[700px] bg-accent/10 rounded-full blur-[150px] -z-10 pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <!-- Pigułka technologiczna -->
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-md border border-gray-200 rounded-full shadow-sm mb-10 mx-auto">
+                <span class="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_10px_rgba(124,58,237,0.8)]"></span>
+                <span class="text-xs font-sans font-bold uppercase tracking-[0.2em] text-accent">Performance Marketing Agency</span>
+            </div>
+
+            <h1 class="text-5xl md:text-7xl lg:text-[6rem] font-display font-bold leading-[1.02] mb-10 text-textDark tracking-tight">
+                Przestań przepalać budżet. <br class="hidden md:block"/>
+                <span class="text-gradient">Zacznij generować zysk.</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-textMuted max-w-4xl mx-auto mb-14 font-medium leading-relaxed">
+                The-Arc to nie jest kolejna agencja od bezużytecznych "zasięgów". Jesteśmy bezwzględną maszyną do konwersji. Łączymy elitarną strategię B2B z analitycznym egzekwowaniem, żeby Twój biznes gwałtownie rósł, a nie tylko "był widoczny" w sieci.
+            </p>
+
+            <a href="#kontakt" class="inline-flex items-center gap-3 px-10 py-5 bg-accent text-white rounded-full font-sans font-bold tracking-wide violet-glow mx-auto text-lg uppercase transition-transform hover:-translate-y-1">
+                Odbierz Darmowy Audyt Kampanii
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- SEKCJA PROBLEM/ROZWIĄZANIE (Tajemnica AI) -->
+    <section class="py-24 px-6 md:px-12 relative z-10 bg-white/40 border-y border-gray-200/50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-display font-bold text-center mb-16 text-textDark tracking-tight">Dlaczego Twoja konkurencja Cię wyprzedza?</h2>
+            
+            <div class="glass-milky p-10 md:p-16 relative overflow-hidden ring-1 ring-gray-100">
+                <!-- Flara na rogu -->
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-accent/5 rounded-full blur-[40px] pointer-events-none"></div>
+                
+                <p class="text-xl md:text-2xl text-textDark leading-relaxed font-medium relative z-10">
+                    Większość agencji marnuje Twoje pieniądze na puste lajki, raportując wskaźniki, które nie płacą faktur. My działamy inaczej. Sprzedajemy twardy profit. <br><br>
+                    <span class="text-accent font-bold">Nasz sekret?</span> Optymalizujemy każdy krok leada przy użyciu własnych, wewnątrzfirmowych algorytmów sztucznej inteligencji. To pozwala nam analizować rynki, pisać skrypty i optymalizować kampanie radykalnie szybciej i taniej niż w tradycyjnych firmach. Cały zaoszczędzony budżet operacyjny inwestujemy prosto w Twoje zasięgi reklamowe. 
+                </p>
+                <div class="mt-8 pt-8 border-t border-gray-200 flex items-center justify-between relative z-10">
+                    <span class="font-display font-bold text-2xl text-textDark">Dostajesz bezkonkurencyjne uderzenie marketingowe za ułamek ceny rynkowej.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2 GŁÓWNE FILARY USŁUG -->
+    <section id="marketing" class="py-32 px-6 md:px-12 relative z-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+            <!-- KARTA 1 -->
+            <div class="glass-milky p-12 flex flex-col items-start transition-all hover:shadow-[0_20px_50px_-10px_rgba(124,58,237,0.15)] group relative overflow-hidden">
+                <div class="w-16 h-16 bg-[#0F172A] rounded-2xl flex items-center justify-center mb-8 shadow-md">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"></path><path d="M18 20V4"></path><path d="M6 20v-4"></path></svg>
+                </div>
+                <h3 class="text-3xl font-display font-bold mb-6 text-textDark">Marketing Efektywnościowy</h3>
+                <p class="text-textMuted text-lg leading-relaxed mb-8 flex-grow">
+                    Twarda infrastruktura sprzedażowa. Przejmujemy całkowitą kontrolę nad Twoimi kampaniami Google Ads, Meta Ads oraz strategią SEO. Generujemy i dogrzewamy leady B2B, mierząc absolutnie wszystko – od kosztu kliknięcia po LTV Twojego klienta. Każda wydana złotówka musi przynieść wymierny zwrot (ROI).
+                </p>
+                <div class="flex flex-col gap-3 w-full border-t border-gray-200 pt-6">
+                    <div class="flex items-center gap-3 text-textDark font-semibold"><div class="w-2 h-2 bg-accent rounded-full"></div> Bezwzględna optymalizacja Ads</div>
+                    <div class="flex items-center gap-3 text-textDark font-semibold"><div class="w-2 h-2 bg-accent rounded-full"></div> Agresywne pozyskiwanie leadów B2B</div>
+                    <div class="flex items-center gap-3 text-textDark font-semibold"><div class="w-2 h-2 bg-accent rounded-full"></div> Pełne raportowanie kosztu konwersji</div>
+                </div>
+            </div>
+
+            <!-- KARTA 2 -->
+            <div class="glass-milky p-12 flex flex-col items-start transition-all hover:shadow-[0_20px_50px_-10px_rgba(124,58,237,0.15)] group relative overflow-hidden">
+                <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mb-8 shadow-md">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+                </div>
+                <h3 class="text-3xl font-display font-bold mb-6 text-textDark">Strategia & Optymalizacja Konwersji</h3>
+                <p class="text-textMuted text-lg leading-relaxed mb-8 flex-grow">
+                    Nawet największy ruch jest bezwartościowy, jeśli nikt nie kupuje. Budujemy architekturę lejków sprzedażowych, projektujemy lądowiska (landing pages) pod morderczą konwersję (CRO) i analizujemy zachowania użytkowników, aby podnosić wolumen sprzedaży na bazie Twojego obecnego ruchu.
+                </p>
+                <div class="flex flex-col gap-3 w-full border-t border-gray-200 pt-6">
+                    <div class="flex items-center gap-3 text-textDark font-semibold"><div class="w-2 h-2 bg-[#0F172A] rounded-full"></div> Precyzyjna architektura lejków</div>
+                    <div class="flex items-center gap-3 text-textDark font-semibold"><div class="w-2 h-2 bg-[#0F172A] rounded-full"></div> Inżynieria Landing Pages (CRO)</div>
+                    <div class="flex items-center gap-3 text-textDark font-semibold"><div class="w-2 h-2 bg-[#0F172A] rounded-full"></div> Zwiększanie sprzedaży z obecnego ruchu</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TRUST (Conceptual Counters) -->
+    <section class="py-24 px-6 md:px-12 bg-white border-y border-gray-200">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/3 text-center md:text-left border-b md:border-b-0 md:border-r border-gray-200 pb-8 md:pb-0 md:pr-12">
+                <h2 class="text-3xl font-display font-bold text-textDark mb-4">Liczby nie kłamią. Wybierz jakość.</h2>
+                <p class="text-textMuted font-medium">Bierzemy odpowiedzialność za każdy zainwestowany grosz.</p>
+            </div>
+            <div class="md:w-2/3 grid grid-cols-2 md:grid-cols-3 gap-8 text-center w-full">
+                <!-- Counter 1 -->
+                <div>
+                    <div class="text-5xl md:text-6xl font-display font-bold text-accent mb-2">124+</div>
+                    <div class="text-sm font-bold uppercase tracking-wider text-textDark">Zadowolonych B2B</div>
+                </div>
+                <!-- Counter 2 -->
+                <div>
+                    <div class="text-5xl md:text-6xl font-display font-bold text-[#0F172A] mb-2">8.5m</div>
+                    <div class="text-sm font-bold uppercase tracking-wider text-textDark">Zarządzanego Budżetu (PLN)</div>
+                </div>
+                <!-- Counter 3 -->
+                <div class="col-span-2 md:col-span-1">
+                    <div class="text-5xl md:text-6xl font-display font-bold text-accent mb-2">42%</div>
+                    <div class="text-sm font-bold uppercase tracking-wider text-textDark">Średni wzrost ROI w Q1</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER Z FORMULARZEM KONTAKTOWYM -->
+    <footer id="kontakt" class="py-24 px-6 md:px-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 relative z-10">
+            
+            <!-- Tekst kontaktowy -->
+            <div class="lg:w-1/2">
+                <h2 class="text-5xl font-display font-bold mb-6 text-textDark tracking-tight">Odrzuć kompromisy. <br><span class="text-accent">Wejdź na najwyższy poziom.</span></h2>
+                <p class="text-xl text-textMuted mb-12 font-medium">
+                    Jeśli jesteś gotowy przestać bawić się w "widoczność" i zacząć egzekwować twarde zyski z internetu, wypełnij formularz. Przeprowadzimy wnikliwy audyt Twojego środowiska marketingowego i wrócimy z precyzyjnym planem uderzenia.
+                </p>
+                <div class="space-y-6">
+                    <!-- E-mail -->
+                    <div class="flex items-center gap-4 text-lg font-semibold text-textDark">
+                        <div class="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center text-accent shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <a href="mailto:office@the-arc.pl" class="hover:text-accent transition-colors">office@the-arc.pl</a>
+                    </div>
+                    <!-- Telefon -->
+                    <div class="flex items-center gap-4 text-lg font-semibold text-textDark">
+                        <div class="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center text-accent shrink-0">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <a href="tel:+48696377674" class="hover:text-accent transition-colors">696 377 674</a>
+                    </div>
+                    <!-- Adres -->
+                    <div class="flex items-start gap-4 text-lg font-semibold text-textDark">
+                        <div class="w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <address class="not-italic leading-snug">
+                            ul. Polna 38<br>
+                            <span class="text-textMuted font-medium text-base">07-308 Nowa Osuchowa (Poręba)</span>
+                        </address>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formularz w stylu mlecznym -->
+            <div class="lg:w-1/2">
+                <div class="glass-milky p-10 md:p-12 w-full">
+                    <h3 class="text-2xl font-display font-bold mb-8 text-textDark">Zapytaj o bezpłatną wycenę audytu</h3>
+                    <form class="space-y-6" onsubmit="event.preventDefault();">
+                        <div>
+                            <label class="block text-sm font-bold text-textDark mb-2 ml-1">Numer NIP Firmy</label>
+                            <input type="text" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 transition-all font-medium text-textDark" placeholder="Wpisz numery NIP" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-textDark mb-2 ml-1">Służbowy Adres E-mail</label>
+                            <input type="email" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 transition-all font-medium text-textDark" placeholder="Twój e-mail" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-textDark mb-2 ml-1">Miesięczny budżet reklamowy (PLN)</label>
+                            <select class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 transition-all font-medium text-textDark" required>
+                                <option value="" disabled selected>Wybierz przedział budżetowy...</option>
+                                <option value="small">Poniżej 5 000 PLN / m-c</option>
+                                <option value="medium">5 000 PLN - 15 000 PLN / m-c</option>
+                                <option value="large">15 000 PLN - 50 000 PLN / m-c</option>
+                                <option value="enterprise">Powyżej 50 000 PLN / m-c</option>
+                            </select>
+                        </div>
+                        
+                        <div class="pt-4">
+                            <button class="w-full px-8 py-5 bg-[#0F172A] text-white rounded-xl font-sans font-bold uppercase tracking-widest hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0F172A]/30 transition-all duration-300">
+                                Wyślij zapytanie
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto pt-10 mt-16 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-sm text-textMuted font-medium">
+            <p>© <script>document.write(new Date().getFullYear())</script> The-Arc Performance Marketing. Wszelkie prawa zastrzeżone.</p>
+            <div class="mt-4 md:mt-0 space-x-6">
+                <a href="landing-ksef.html" class="hover:text-accent font-bold">Wdrożenia IT: KSeF</a>
+                <a href="#" class="hover:text-textDark transition-colors">Polityka Prywatności</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
