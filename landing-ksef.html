@@ -297,24 +297,24 @@
             <div class="lg:w-1/2">
                 <div class="glass-milky p-8 md:p-12 w-full">
                     <h3 class="text-2xl font-display font-bold mb-8 text-textDark">Zapytaj o bezpłatną wycenę wdrożenia</h3>
-                    <form class="space-y-6" onsubmit="event.preventDefault();">
+                    <form action="https://formspree.io/f/xdawrlwa" method="POST" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label class="block text-sm font-medium text-textMuted mb-2 ml-1">Numer NIP</label>
-                                <input type="text" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-teal focus:bg-white focus:ring-2 focus:ring-teal/10 transition-all placeholder-gray-400" placeholder="000-000-00-00" required>
+                                <input type="text" name="nip" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-teal focus:bg-white focus:ring-2 focus:ring-teal/10 transition-all placeholder-gray-400" placeholder="000-000-00-00" required>
                             </div>
                             <div>
                                 <label class="block text-sm font-medium text-textMuted mb-2 ml-1">Adres E-mail</label>
-                                <input type="email" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-teal focus:bg-white focus:ring-2 focus:ring-teal/10 transition-all placeholder-gray-400" placeholder="kontakt@twojafirma.pl" required>
+                                <input type="email" name="email" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-teal focus:bg-white focus:ring-2 focus:ring-teal/10 transition-all placeholder-gray-400" placeholder="kontakt@twojafirma.pl" required>
                             </div>
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-textMuted mb-2 ml-1">Krótki opis obecnego systemu księgowego</label>
-                            <textarea rows="4" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-teal focus:bg-white focus:ring-2 focus:ring-teal/10 transition-all resize-none placeholder-gray-400" placeholder="Przykład: Korzystamy z systemu SAP oraz Comarch ERP..."></textarea>
+                            <textarea name="opis_systemu" rows="4" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-teal focus:bg-white focus:ring-2 focus:ring-teal/10 transition-all resize-none placeholder-gray-400" placeholder="Przykład: Korzystamy z systemu SAP oraz Comarch ERP..."></textarea>
                         </div>
                         
                         <div class="pt-4">
-                            <button class="w-full px-8 py-4 bg-accent text-white rounded-xl font-sans font-medium hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300">
+                            <button type="submit" class="w-full px-8 py-4 bg-accent text-white rounded-xl font-sans font-medium hover:-translate-y-1 hover:shadow-lg hover:shadow-accent/30 transition-all duration-300">
                                 Wyślij zapytanie o darmową wycenę
                             </button>
                             <p class="text-xs text-center text-gray-400 mt-4">Powyższe dane wykorzystywane są wyłącznie w celu dokonania bezpłatnej wizji i wyceny współpracy.</p>

@@ -288,18 +288,18 @@
             <div class="lg:w-1/2">
                 <div class="glass-milky p-10 md:p-12 w-full">
                     <h3 class="text-2xl font-display font-bold mb-8 text-textDark">Zapytaj o bezpłatną wycenę audytu</h3>
-                    <form class="space-y-6" onsubmit="event.preventDefault();">
+                    <form action="https://formspree.io/f/xdawrlwa" method="POST" class="space-y-6">
                         <div>
                             <label class="block text-sm font-bold text-textDark mb-2 ml-1">Numer NIP Firmy</label>
-                            <input type="text" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 transition-all font-medium text-textDark" placeholder="Wpisz numery NIP" required>
+                            <input type="text" name="nip" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 transition-all font-medium text-textDark" placeholder="Wpisz numery NIP" required>
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-textDark mb-2 ml-1">Służbowy Adres E-mail</label>
-                            <input type="email" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 transition-all font-medium text-textDark" placeholder="Twój e-mail" required>
+                            <input type="email" name="email" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 transition-all font-medium text-textDark" placeholder="Twój e-mail" required>
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-textDark mb-2 ml-1">Miesięczny budżet reklamowy (PLN)</label>
-                            <select class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 transition-all font-medium text-textDark" required>
+                            <select name="budzet_marketingowy" class="w-full bg-white/60 border border-gray-200 rounded-xl px-5 py-4 focus:outline-none focus:border-accent focus:bg-white focus:ring-2 focus:ring-accent/20 transition-all font-medium text-textDark" required>
                                 <option value="" disabled selected>Wybierz przedział budżetowy...</option>
                                 <option value="small">Poniżej 5 000 PLN / m-c</option>
                                 <option value="medium">5 000 PLN - 15 000 PLN / m-c</option>
@@ -309,7 +309,7 @@
                         </div>
                         
                         <div class="pt-4">
-                            <button class="w-full px-8 py-5 bg-[#0F172A] text-white rounded-xl font-sans font-bold uppercase tracking-widest hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0F172A]/30 transition-all duration-300">
+                            <button type="submit" class="w-full px-8 py-5 bg-[#0F172A] text-white rounded-xl font-sans font-bold uppercase tracking-widest hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0F172A]/30 transition-all duration-300">
                                 Wyślij zapytanie
                             </button>
                         </div>
